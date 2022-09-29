@@ -44,7 +44,7 @@ try {
         send_json(['error' => 'No links found']);
     }
 
-} catch (\YouTube\Exception\YouTubeException $e) {
+} catch (\YouTube\Exception\YouTubeException $links) {
 
     send_json([
         'error' => $e->getMessage()
