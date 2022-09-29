@@ -16,7 +16,7 @@ $video_name = getTitle($url);
 function send_json($data)
 {
     header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    echo json_decode($data, JSON_PRETTY_PRINT);
     exit;
 }
 
