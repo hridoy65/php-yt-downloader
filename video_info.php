@@ -16,7 +16,7 @@ $video_name = getTitle($url);
 function send_json($data)
 {
     header('Content-Type: application/json');
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    echo ($data, JSON_PRETTY_PRINT);
     exit;
 }
 
@@ -44,7 +44,7 @@ try {
         send_json(['error' => 'No links found']);
     }
 
-} catch (\YouTube\Exception\YouTubeException $first) {
+} catch (\YouTube\Exception\YouTubeException $e) {
 
     send_json([
         'error' => $e->getMessage()
