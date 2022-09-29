@@ -13,10 +13,10 @@ function getTitle($url) {
 
 $video_name = getTitle($url);
 
-function send_json($data)
+function send_json($links)
 {
     header('Content-Type: application/json');
-    echo "$first";
+    echo "$links";
     exit;
 }
 
