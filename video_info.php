@@ -13,10 +13,10 @@ function send_json($data)
 
 $video_name = getTitle($url);
 
-    send_json($data)
+   function send_json($data)
 {
     header('Content-Type: application/json');
-    echo $data;
+    echo json_encode($data, JSON_PRETTY_PRINT);
     exit;
 }
 
