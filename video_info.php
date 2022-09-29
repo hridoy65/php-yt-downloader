@@ -4,11 +4,11 @@ require('vendor/autoload.php');
 
 $url = isset($_GET['url']) ? $_GET['url'] : null;
 
-function getTitle($url) {
-    $page = file_get_contents($url);
-    $title = preg_match('/<title[^>]*>(.*?)<\/title>/ims', $page, $match) ? $match[1] : null;
-	$video_title = substr($title, 0, -10);
-    return $video_title;
+function send_json($data)
+{
+    header('Content-Type: application/json');
+    echo json_encode($data, JSON_PRETTY_PRINT);
+    exit;
 }
 
 $video_name = getTitle($url);
