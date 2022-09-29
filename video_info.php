@@ -15,8 +15,8 @@ $video_name = getTitle($url);
 
 function send_json($data)
 {
-    header('Content-Type: video/webm');
-    echo json_encode($data, JSON_PRETTY_PRINT);
+    header('Content-Type: application/json');
+    echo "$data";
     exit;
 }
 
